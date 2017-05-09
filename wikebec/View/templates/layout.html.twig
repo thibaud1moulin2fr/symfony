@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>wikebec</title>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="index.php?page=accueil">Accueil</a>
+        <a href="index.php?page=termes">Liste de toutes les expressions</a>
+        <a href="index.php?page=faq">Aller à FAQ</a>
+    </nav>
+</header>
+<main>
+    {# Comment #}
+    {% block main %}<h2>Bonjour !</h2>{% endblock %}
+</main>
+<footer>
+
+</footer>
+{% block javascripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{% endblock %}
+</body>
+</html>

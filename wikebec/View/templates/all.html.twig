@@ -1,0 +1,29 @@
+{% extends 'layout.html.twig' %}
+{% block main %}
+    <h2>Liste des expressions</h2>
+    <input type="text" id="filter-field"/>
+    <table id='term-list'>
+        <thead>
+        <tr>
+            <td>Terme</td>
+            <td>Définition</td>
+            <td>Exemple</td>
+            <td>Nombre de votes</td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for term in allTerms %}
+            <tr>
+                <td><a href="index.php?page=detail&term={{ term.id }}">{{ term.term }}</a></td>
+                <td>{{ term.definition1 ~ term.definition2 }}</td>
+                <td>{{ term.example }}</td>
+                <td>{{ term.votesCount }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="assets/filter.js"></script>
+{% endblock %}

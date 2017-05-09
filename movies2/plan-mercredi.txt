@@ -1,0 +1,27 @@
+fin de l'inscription
+	rediriger vers une nouvelle page : connexion
+
+connexion
+	formulaire : username ou email et password
+	traitement et login
+	-> les sessions et les cookies
+
+afficher les liens Inscription / Connexion / Déconnexion / Bonjour Johnny
+
+déconnexion
+	nouvelle page
+	redirection
+
+oubli du mot de passe
+	formulaire : username ou email
+	génération de token
+	-> composer
+	envoi d'un email 
+	-> papercut
+
+liste des "Films à voir"
+	bouton "Ajouter à ma liste" sur la page de détail
+	traitement du bouton dans nouvelle page
+	-> ajax
+
+affichage de la liste des films à voir

@@ -1,0 +1,15 @@
+{% extends "FarmBundle::layout.html.twig" %}
+
+{% block main %}
+    <h2>Détail du produit</h2>
+    <ul>
+        <li>{{ product.name }}</li>
+        <li>{% for image in product.images %}<img src="{{ image.file }}"/></li>{% endfor %}
+        <li>{{ product.price|number_format(2, ',', ' ') }}</li>
+        <li>{{ product.description }}</li>
+        <li>{{ product.quantity|number_format(0, ',', ' ') }}</li>
+        <li>{{ product.dateCreation|date('d-m-Y à H-i-s') }}</li>
+        <li>{% if product.isActive %}Le produit est disponnible{% else %}Produit momentanément
+            indisponnible{% endif %}</a></li>
+    </ul>
+{% endblock %}

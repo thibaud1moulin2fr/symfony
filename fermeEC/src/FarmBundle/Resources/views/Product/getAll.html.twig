@@ -1,0 +1,11 @@
+{% extends "FarmBundle::layout.html.twig" %}
+
+{% block main %}
+    <h2>Liste des produits</h2>
+    <ul class="list-group">
+        {% for product in products %}
+            <li class="list-group-item col-xs-4"><a
+                        href="{{ path('getById', {'id': product.id}) }}">{{ product.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

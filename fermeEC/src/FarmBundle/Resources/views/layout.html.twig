@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+            La Ferme Taïeuille
+        {% endblock %}
+    </title>
+    <!--<link rel="stylesheet" href="\fermeEC\bootstrap\css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
+</head>
+<body>
+<div class="container">
+    <nav>
+        <ul class="nav nav-pills">
+            <li><a href="{{ path('home') }}">Accueil</a></li>
+            <li><a href="{{ path('about') }}">A propos</a></li>
+            <li><a href="{{ path('faq') }}">Faq</a></li>
+            <li><a href="{{ path('contact') }}">Contact</a></li>
+            <li><a href="{{ path('add') }}">Ajouter des produits</a></li>
+            <li><a href="{{ path('getAll') }}">Liste des produits</a></li>
+            <li><a href="{{ path('login') }}">Connexion</a></li>
+        </ul>
+    </nav>
+    {% for flash_message in app.session.flashBag.get('success') %}
+        <div class="alert alert-success">
+            {{ flash_message }}
+        </div>
+    {% endfor %}
+    {% block main %}{% endblock %}
+    {% block javascript %}
+        <!--<script href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    {% endblock %}
+</div>
+</body>
+</html>

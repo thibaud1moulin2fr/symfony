@@ -1,0 +1,41 @@
+home:
+    path:     /
+    defaults: { _controller: FarmBundle:Default:index }
+
+about:
+    path: /a-propos
+    defaults: { _controller: FarmBundle:Default:about }
+
+faq:
+    path: /faq
+    defaults: { _controller: FarmBundle:Default:faq }
+
+contact:
+    path: /contact
+    defaults: { _controller: FarmBundle:Default:contact }
+
+add:
+    path:     /produit/ajouter
+    defaults: { _controller: FarmBundle:Product:add }
+
+getAll:
+    path: /produit/lste
+    defaults: { _controller: FarmBundle:Product:getAll }
+
+getById:
+    path: /produit/detail/{id}
+    defaults: { _controller: FarmBundle:Product:getById }
+    requirements:
+        id: \d+ #Id doit être un entier
+
+addImage:
+    path: /produit/{productId}/image/ajout
+    defaults: { _controller: FarmBundle:Product:addImage }
+
+register:
+    path:     /utilisateur/inscription
+    defaults: { _controller: FarmBundle:User:register }
+
+login:
+    path: /utilisateur/connexion
+    defaults: { _controller: FarmBundle:User:login }

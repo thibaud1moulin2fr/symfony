@@ -1,0 +1,50 @@
+body {
+    background-color: #000;
+    color: #FFF;
+    font-family: 'Slabo 27px', serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+header #logo {
+    font-size: 24px;
+    margin: 10px 0;
+    display: block;
+}
+
+.posters-list {
+    display: grid;
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
+    grid-template-columns: auto auto;
+    margin: auto;
+}
+
+.poster {
+    display: block;
+}
+
+.poster img {
+    width: 100%;
+    max-width: 350px;
+}
+
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+    .posters-list {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .posters-list {
+        grid-template-columns: auto auto auto auto auto;
+    }
+}
